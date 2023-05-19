@@ -1,0 +1,16 @@
+<div *ngIf="title" class="card" 
+    [ngClass]="title.split(' ')[0]"
+    [ngStyle]="{'background-image': 'url('+img+')'}">
+    <div class="card-content">
+        <div class="card-row">
+            <span class="title">{{title}}</span>
+            <button class="options">
+                <img src="/assets/icon-ellipsis.svg" alt="options button">
+            </button>
+        </div>
+        <div class="card-row">
+            <span class="time">{{time}}hrs</span>
+            <span class="prev-time">Last {{period | titlecase}} - {{prevTime}}hrs</span>
+        </div>
+    </div>
+</div>

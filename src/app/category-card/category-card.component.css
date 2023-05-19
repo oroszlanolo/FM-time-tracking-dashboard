@@ -1,0 +1,84 @@
+
+.card {
+    --border-radius: 1.25rem;
+    border-radius: var(--border-radius);
+    padding-top: 2.5rem;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-position: right 15px top -5px;
+}
+
+.card-content {
+    background-color: var(--col-neutral-500);
+    border-radius: calc(var(--border-radius) - 0.25rem);
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: filter 200ms;
+}
+
+.card-content:hover {
+    filter: brightness(120%);
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.time {
+    font-size: 27px;
+    font-weight: 300;
+}
+.prev-time {
+    color: var(--col-neutral-200);
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.options {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.options:hover img {
+    filter: brightness(0%) invert(100%);
+}
+
+.Work {
+    background-color: var(--col-work);
+}
+.Play {
+    background-color: var(--col-play);
+}
+.Study {
+    background-color: var(--col-study);
+}
+.Exercise {
+    background-color: var(--col-exercise);
+}
+.Social {
+    background-color: var(--col-social);
+}
+.Self {
+    background-color: var(--col-self);
+}
+
+@media(min-width: 700px) {
+    .card-row:last-child {
+        flex-direction: column;
+        align-items: start;
+        gap: .25rem;
+        margin-top: 1rem;
+    }
+    .time {
+        font-size: 42px;
+    }
+}
